@@ -1,194 +1,130 @@
-@prefix ex: <http://example.org/exercise#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/fitness#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Classes
-ex:Person a owl:Class .
-ex:Exercise a owl:Class .
-ex:MuscleGroup a owl:Class .
-ex:TrainingSession a owl:Class .
-ex:WorkoutRoutine a owl:Class .
-ex:ExerciseType a owl:Class .
-ex:RoutineType a owl:Class .
-ex:Weight a owl:Class .
-ex:NutritionPlan a owl:Class .
-ex:Intensity a owl:Class .
-ex:TimeUnderTension a owl:Class .
+### Classes ###
+:Person rdf:type rdfs:Class .
+:FitnessPlan rdf:type rdfs:Class .
+:NutritionPlan rdf:type rdfs:Class .
+:Exercise rdf:type rdfs:Class .
+:CompoundExercise rdf:type :Exercise .
+:IsolationExercise rdf:type :Exercise .
+:MuscleGroup rdf:type rdfs:Class .
+:Set rdf:type rdfs:Class .
+:Repetition rdf:type rdfs:Class .
 
-# Individuals
-ex:JohnDoe a ex:Person ;
-    ex:bodyWeight "75"^^xsd:float ;
-    ex:followsNutritionPlan ex:Plan1 .
+### Properties ###
+:hasWeight rdf:type rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:float .
 
-ex:Plan1 a ex:NutritionPlan ;
-    ex:caloriesConsumed "3000"^^xsd:int ;
-    ex:caloriesBurned "2500"^^xsd:int ;
-    ex:calorieSurplus "500"^^xsd:int ;
-    ex:proteinIntake "150"^^xsd:float ;
-    ex:proteinPerKg "2.0"^^xsd:float .
+:hasCaloricIntake rdf:type rdf:Property ;
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
-ex:BenchPress a ex:Exercise, ex:CompoundExercise ;
-    ex:targetsMuscleGroup ex:Chest ;
-    ex:initialWeight "100"^^xsd:float ;
-    ex:currentWeight "110"^^xsd:float ;
-    ex:initialReps "10"^^xsd:int ;
-    ex:currentReps "12"^^xsd:int ;
-    ex:initialSets "3"^^xsd:int ;
-    ex:currentSets "4"^^xsd:int ;
-    ex:partOfSession ex:TrainingSession1 ;
-    ex:weightUsed "110"^^xsd:float ;
-    ex:percentageOf1RM "75"^^xsd:float ;
-    ex:nearMuscleFailure true ;
-    ex:focusOnEccentric true ;
-    ex:eccentricDuration "3"^^xsd:int ;
-    ex:concentricDuration "1"^^xsd:int ;
-    ex:totalTimeUnderTension "4"^^xsd:int ;
-    ex:restBetweenSets "90"^^xsd:int ;
-    ex:restBetweenExercises "180"^^xsd:int .
+:hasCaloricExpenditure rdf:type rdf:Property ;
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
-ex:Squats a ex:Exercise, ex:CompoundExercise ;
-    ex:targetsMuscleGroup ex:Legs ;
-    ex:partOfSession ex:TrainingSession1 .
+:hasProteinIntake rdf:type rdf:Property ;
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
-ex:BicepCurls a ex:Exercise, ex:IsolationExercise ;
-    ex:targetsMuscleGroup ex:SpecificMuscles ;
-    ex:partOfSession ex:TrainingSession2 .
+:followsNutritionPlan rdf:type rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :NutritionPlan .
 
-ex:Chest a ex:MuscleGroup .
-ex:Legs a ex:MuscleGroup .
+:requiresCaloricSurplus rdf:type rdf:Property ;
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:boolean .
 
-# Object Properties
-ex:targetsMuscleGroup a owl:ObjectProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range ex:MuscleGroup .
+:targetsMuscleGroup rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range :MuscleGroup .
 
-ex:partOfSession a owl:ObjectProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range ex:TrainingSession .
+:hasIntensity rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:float .
 
-ex:followsNutritionPlan a owl:ObjectProperty ;
-    rdfs:domain ex:Person ;
-    rdfs:range ex:NutritionPlan .
+:hasRepetitionRange rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:string .
 
-# Data Properties
-ex:bodyWeight a owl:DatatypeProperty ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:float .
+:hasSetCount rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
-ex:caloriesConsumed a owl:DatatypeProperty ;
-    rdfs:domain ex:NutritionPlan ;
-    rdfs:range xsd:int .
+:hasWeightUsed rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:float .
 
-ex:caloriesBurned a owl:DatatypeProperty ;
-    rdfs:domain ex:NutritionPlan ;
-    rdfs:range xsd:int .
+:hasRestPeriod rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
-ex:calorieSurplus a owl:DatatypeProperty ;
-    rdfs:domain ex:NutritionPlan ;
-    rdfs:range xsd:int .
+:hasTimeUnderTension rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
-ex:proteinIntake a owl:DatatypeProperty ;
-    rdfs:domain ex:NutritionPlan ;
-    rdfs:range xsd:float .
+:progressiveOverload rdf:type rdf:Property ;
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:boolean .
 
-ex:proteinPerKg a owl:DatatypeProperty ;
-    rdfs:domain ex:NutritionPlan ;
-    rdfs:range xsd:float .
+:hasFrequency rdf:type rdf:Property ;
+    rdfs:domain :FitnessPlan ;
+    rdfs:range xsd:integer .
 
-ex:initialWeight a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:float .
+:includesExercise rdf:type rdf:Property ;
+    rdfs:domain :FitnessPlan ;
+    rdfs:range :Exercise .
 
-ex:currentWeight a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:float .
+### Individuals ###
+:JohnDoe rdf:type :Person ;
+    :hasWeight 75.0 ;
+    :followsNutritionPlan :Plan1 .
 
-ex:initialReps a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
+:Plan1 rdf:type :NutritionPlan ;
+    :hasCaloricIntake 3000.0 ;
+    :hasCaloricExpenditure 2500.0 ;
+    :requiresCaloricSurplus true ;
+    :hasProteinIntake 150.0 .
 
-ex:currentReps a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
+:BenchPress rdf:type :CompoundExercise ;
+    :targetsMuscleGroup :Chest ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 110.0 ;
+    :hasRestPeriod 90 ;
+    :hasTimeUnderTension 4 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.85 .
 
-ex:initialSets a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
+:Squats rdf:type :CompoundExercise ;
+    :targetsMuscleGroup :Legs ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 100.0 ;
+    :hasRestPeriod 90 ;
+    :hasTimeUnderTension 4 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.85 .
 
-ex:currentSets a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
+:BicepCurls rdf:type :IsolationExercise ;
+    :targetsMuscleGroup :Biceps ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 20.0 ;
+    :hasRestPeriod 60 ;
+    :hasTimeUnderTension 3 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.75 .
 
-ex:weightUsed a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:float .
+:Chest rdf:type :MuscleGroup .
+:Legs rdf:type :MuscleGroup .
+:Biceps rdf:type :MuscleGroup .
 
-ex:percentageOf1RM a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:float .
-
-ex:nearMuscleFailure a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:boolean .
-
-ex:focusOnEccentric a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:boolean .
-
-ex:eccentricDuration a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
-
-ex:concentricDuration a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
-
-ex:totalTimeUnderTension a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
-
-ex:restBetweenSets a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
-
-ex:restBetweenExercises a owl:DatatypeProperty ;
-    rdfs:domain ex:Exercise ;
-    rdfs:range xsd:int .
-
-ex:frequencyPerWeek a owl:DatatypeProperty ;
-    rdfs:domain ex:MuscleGroup ;
-    rdfs:range xsd:int .
-
-# Restrictions (OWL2)
-[ a owl:Restriction ;
-    owl:onProperty ex:currentWeight ;
-    owl:allValuesFrom [ a rdfs:Datatype ; owl:withRestrictions ( [ xsd:minInclusive ex:initialWeight ] ) ]
-] .
-
-[ a owl:Restriction ;
-    owl:onProperty ex:currentReps ;
-    owl:allValuesFrom [ a rdfs:Datatype ; owl:withRestrictions ( [ xsd:minInclusive ex:initialReps ] ) ]
-] .
-
-[ a owl:Restriction ;
-    owl:onProperty ex:currentSets ;
-    owl:allValuesFrom [ a rdfs:Datatype ; owl:withRestrictions ( [ xsd:minInclusive ex:initialSets ] ) ]
-] .
-
-[ a owl:Restriction ;
-    owl:onProperty ex:calorieSurplus ;
-    owl:someValuesFrom [ a xsd:int ; xsd:minInclusive "0"^^xsd:int ]
-] .
-
-[ a owl:Restriction ;
-    owl:onProperty ex:proteinIntake ;
-    owl:someValuesFrom [ a xsd:float ; xsd:minInclusive "1.6"^^xsd:float ; xsd:maxInclusive "2.2"^^xsd:float ]
-] .
-
-# Additional Relationships
-ex:TrainingSession1 a ex:TrainingSession ;
-    ex:hasRoutineType ex:RoutineTypeFullBody .
-
-ex:RoutineTypeFullBody a ex:RoutineType ;
-    ex:includesMuscleGroup ex:Chest, ex:Legs, ex:SpecificMuscles .
+### Fitness Plan ###
+:JohnDoeFitnessPlan rdf:type :FitnessPlan ;
+    :hasFrequency 3 ;
+    :includesExercise :BenchPress, :Squats, :BicepCurls .
