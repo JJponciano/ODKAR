@@ -1,0 +1,258 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/fitness#> .
+
+# Declare the ontology
+ex:FitnessOntology a owl:Ontology ;
+    rdfs:comment "Ontology representing a fitness and nutrition system for John Doe." .
+
+# Classes
+ex:Person a owl:Class .
+ex:NutritionPlan a owl:Class .
+ex:PhysicalTraining a owl:Class .
+ex:Exercise a owl:Class .
+ex:MuscleGroup a owl:Class .
+ex:Principle a owl:Class .
+ex:TrainingRoutine a owl:Class .
+ex:TrainingSession a owl:Class .
+ex:RestPeriod a owl:Class .
+
+# Subclasses
+ex:CompoundExercise a owl:Class ;
+    rdfs:subClassOf ex:Exercise .
+
+ex:IsolationExercise a owl:Class ;
+    rdfs:subClassOf ex:Exercise .
+
+ex:ProgressiveOverload a owl:Class ;
+    rdfs:subClassOf ex:Principle .
+
+ex:Variation a owl:Class ;
+    rdfs:subClassOf ex:Principle .
+
+# Properties
+
+## Object Properties
+ex:hasNutritionPlan a owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:NutritionPlan .
+
+ex:hasPhysicalTraining a owl:ObjectProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range ex:PhysicalTraining .
+
+ex:includesExercise a owl:ObjectProperty ;
+    rdfs:domain ex:PhysicalTraining ;
+    rdfs:range ex:Exercise .
+
+ex:targetsMuscleGroup a owl:ObjectProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range ex:MuscleGroup .
+
+ex:appliesPrinciple a owl:ObjectProperty ;
+    rdfs:domain ex:PhysicalTraining ;
+    rdfs:range ex:Principle .
+
+ex:hasTrainingRoutine a owl:ObjectProperty ;
+    rdfs:domain ex:PhysicalTraining ;
+    rdfs:range ex:TrainingRoutine .
+
+ex:hasTrainingSession a owl:ObjectProperty ;
+    rdfs:domain ex:PhysicalTraining ;
+    rdfs:range ex:TrainingSession .
+
+ex:hasRestPeriod a owl:ObjectProperty ;
+    rdfs:domain ex:TrainingSession ;
+    rdfs:range ex:RestPeriod .
+
+## Data Properties
+ex:hasBodyWeight a owl:DatatypeProperty ;
+    rdfs:domain ex:Person ;
+    rdfs:range xsd:decimal .
+
+ex:consumesCalories a owl:DatatypeProperty ;
+    rdfs:domain ex:NutritionPlan ;
+    rdfs:range xsd:integer .
+
+ex:burnsCalories a owl:DatatypeProperty ;
+    rdfs:domain ex:NutritionPlan ;
+    rdfs:range xsd:integer .
+
+ex:hasCalorieSurplus a owl:DatatypeProperty ;
+    rdfs:domain ex:NutritionPlan ;
+    rdfs:range xsd:integer .
+
+ex:hasProteinIntake a owl:DatatypeProperty ;
+    rdfs:domain ex:NutritionPlan ;
+    rdfs:range xsd:decimal .
+
+ex:hasSetsPerWeek a owl:DatatypeProperty ;
+    rdfs:domain ex:MuscleGroup ;
+    rdfs:range xsd:integer .
+
+ex:hasRepetitionsPerSet a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:integer .
+
+ex:hasWeight a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:decimal .
+
+ex:hasIntensityPercentage a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:decimal .
+
+ex:hasRestDuration a owl:DatatypeProperty ;
+    rdfs:domain ex:RestPeriod ;
+    rdfs:range xsd:integer .
+
+ex:hasTimeUnderTension a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:decimal .
+
+ex:hasFrequencyPerWeek a owl:DatatypeProperty ;
+    rdfs:domain ex:MuscleGroup ;
+    rdfs:range xsd:integer .
+
+ex:hasEccentricPhase a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:decimal .
+
+ex:hasConcentricPhase a owl:DatatypeProperty ;
+    rdfs:domain ex:Exercise ;
+    rdfs:range xsd:decimal .
+
+# Individuals
+
+## Persons
+ex:JohnDoe a ex:Person ;
+    ex:hasBodyWeight "75"^^xsd:decimal ;
+    ex:hasNutritionPlan ex:Plan1 ;
+    ex:hasPhysicalTraining ex:TrainingSystem .
+
+## Nutrition Plans
+ex:Plan1 a ex:NutritionPlan ;
+    ex:consumesCalories "3000"^^xsd:integer ;
+    ex:burnsCalories "2500"^^xsd:integer ;
+    ex:hasCalorieSurplus "500"^^xsd:integer ;
+    ex:hasProteinIntake "150"^^xsd:decimal .
+
+## Physical Training
+ex:TrainingSystem a ex:PhysicalTraining ;
+    ex:includesExercise ex:BenchPress, ex:Squats, ex:BicepCurls ;
+    ex:appliesPrinciple ex:ProgressiveOverload, ex:Variation ;
+    ex:hasTrainingRoutine ex:FullBodyRoutine, ex:UpperLowerSplit ;
+    ex:hasTrainingSession ex:Session1, ex:Session2 .
+
+## Exercises
+ex:BenchPress a ex:CompoundExercise ;
+    ex:targetsMuscleGroup ex:Chest ;
+    ex:hasRepetitionsPerSet "6"^^xsd:integer, "12"^^xsd:integer ;
+    ex:hasWeight "110"^^xsd:decimal ;
+    ex:hasIntensityPercentage "70"^^xsd:decimal ;
+    ex:hasTimeUnderTension "4"^^xsd:decimal ;
+    ex:hasEccentricPhase "3"^^xsd:decimal ;
+    ex:hasConcentricPhase "1"^^xsd:decimal .
+
+ex:Squats a ex:CompoundExercise ;
+    ex:targetsMuscleGroup ex:Legs ;
+    ex:hasRepetitionsPerSet "6"^^xsd:integer, "12"^^xsd:integer ;
+    ex:hasWeight "110"^^xsd:decimal ;
+    ex:hasIntensityPercentage "70"^^xsd:decimal ;
+    ex:hasTimeUnderTension "4"^^xsd:decimal ;
+    ex:hasEccentricPhase "3"^^xsd:decimal ;
+    ex:hasConcentricPhase "1"^^xsd:decimal .
+
+ex:BicepCurls a ex:IsolationExercise ;
+    ex:targetsMuscleGroup ex:Biceps ;
+    ex:hasRepetitionsPerSet "6"^^xsd:integer, "12"^^xsd:integer ;
+    ex:hasWeight "30"^^xsd:decimal ;
+    ex:hasIntensityPercentage "70"^^xsd:decimal ;
+    ex:hasTimeUnderTension "4"^^xsd:decimal ;
+    ex:hasEccentricPhase "3"^^xsd:decimal ;
+    ex:hasConcentricPhase "1"^^xsd:decimal .
+
+## Muscle Groups
+ex:Chest a ex:MuscleGroup ;
+    ex:hasSetsPerWeek "12"^^xsd:integer, "20"^^xsd:integer ;
+    ex:hasFrequencyPerWeek "2"^^xsd:integer, "3"^^xsd:integer .
+
+ex:Legs a ex:MuscleGroup ;
+    ex:hasSetsPerWeek "12"^^xsd:integer, "20"^^xsd:integer ;
+    ex:hasFrequencyPerWeek "2"^^xsd:integer, "3"^^xsd:integer .
+
+ex:Biceps a ex:MuscleGroup ;
+    ex:hasSetsPerWeek "12"^^xsd:integer, "20"^^xsd:integer ;
+    ex:hasFrequencyPerWeek "2"^^xsd:integer, "3"^^xsd:integer .
+
+## Principles
+ex:ProgressiveOverload a ex:Principle ;
+    rdfs:label "Progressive Overload" .
+
+ex:Variation a ex:Principle ;
+    rdfs:label "Variation" .
+
+## Training Routines
+ex:FullBodyRoutine a ex:TrainingRoutine ;
+    rdfs:label "Full-Body Workout" .
+
+ex:UpperLowerSplit a ex:TrainingRoutine ;
+    rdfs:label "Upper/Lower Split" .
+
+## Training Sessions
+ex:Session1 a ex:TrainingSession ;
+    ex:hasRestPeriod ex:RestBetweenSets1, ex:RestBetweenExercises1 .
+
+ex:Session2 a ex:TrainingSession ;
+    ex:hasRestPeriod ex:RestBetweenSets2, ex:RestBetweenExercises2 .
+
+## Rest Periods
+ex:RestBetweenSets1 a ex:RestPeriod ;
+    ex:hasRestDuration "60"^^xsd:integer .
+
+ex:RestBetweenExercises1 a ex:RestPeriod ;
+    ex:hasRestDuration "120"^^xsd:integer .
+
+ex:RestBetweenSets2 a ex:RestPeriod ;
+    ex:hasRestDuration "90"^^xsd:integer .
+
+ex:RestBetweenExercises2 a ex:RestPeriod ;
+    ex:hasRestDuration "180"^^xsd:integer .
+
+# Additional Constraints and Annotations
+
+## Protein Intake Calculation
+ex:Plan1 ex:hasProteinIntake "150"^^xsd:decimal ;
+    ex:correspondsToProteinPerKg "2.0"^^xsd:decimal .
+
+# Define Recommended Protein Range as a Class or Property (Optional)
+ex:ProteinRange a owl:Class ;
+    rdfs:comment "Recommended range of protein intake per kilogram of body weight." .
+
+ex:Plan1 ex:proteinWithinRange "true"^^xsd:boolean .
+
+# Progressive Overload Details
+ex:ProgressiveOverload ex:description "Gradual increase in weight, reps, or sets over time to continuously challenge muscles." .
+
+# Variation Details
+ex:Variation ex:description "Changing exercises, rep ranges, and volume every 4 to 8 weeks to prevent plateaus." .
+
+# Time Under Tension Details
+ex:TimeUnderTension a owl:Class ;
+    rdfs:subClassOf ex:Exercise ;
+    rdfs:comment "Total time a muscle is under strain during an exercise, emphasizing the eccentric phase." .
+
+# Example: Bench Press Progressive Overload
+ex:BenchPress ex:hasWeight "100"^^xsd:decimal ;  # Initial weight
+    ex:progressivelyIncreasedTo "110"^^xsd:decimal .
+
+# Links to ensure data consistency
+ex:hasProteinIntake [
+    a ex:ProteinIntake ;
+    ex:amount "150"^^xsd:decimal ;
+    ex:perKg "2.0"^^xsd:decimal ;
+    ex:withinRange "1.6-2.2"^^xsd:string
+] .
+
