@@ -23,9 +23,7 @@ ODKATON addresses the need for an NLP-driven system that transforms unstructured
 ## To-Do List
 
 ### Completed Tasks
-- ✅ **Release of Ontologies**: The three ontologies (Proposed Approach, ChatGPT, and Expert) are available in the repository under the `ontologies` folder.
-- ✅ **Evaluation Data**: The input text and evaluation used to assess the performance of the three ontologies are included in the repository.
-- ✅ **Documentation**: Basic documentation about the structure of the project and how it works.
+- ✅ **Release of Ontologies**: The three ontologies (Proposed Approach, ChatGPT, and Expert) are available.
 
 ### Upcoming Tasks
 - ⬜ **Release the Code**: The code for ODKATON, including the NLP pipeline, ontology mapping, and reasoning engine, will be released soon.
@@ -39,15 +37,6 @@ The installation process will be added when the code is released.
 
 ## Usage
 Usage instructions for running ODKATON and using the ontologies will be included with the code release.
-
-## Ontologies
-The repository includes the following ontologies:
-
-1. **Proposed Approach**: [Download](./ontologies/proposed-ontology.owl)
-2. **ChatGPT Approach**: [Download](./ontologies/chatgpt-ontology.owl)
-3. **Expert Approach**: [Download](./ontologies/expert-ontology.owl)
-
-These ontologies represent the knowledge extracted from the same source text, with varying levels of completeness, consistency, and richness.
 
 ## License
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE) file for details.
