@@ -1,12 +1,11 @@
-@prefix : <http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160> .
+@base <http://www.semanticweb.org/ontologies/2024/8/odkar> .
 
-<http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160> rdf:type owl:Ontology .
+<http://www.semanticweb.org/ontologies/2024/8/odkar> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -20,465 +19,465 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#appliedTo
-:appliedTo rdf:type owl:ObjectProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#appliedTo
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#appliedTo> rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#follows
-:follows rdf:type owl:ObjectProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#follows
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#follows> rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#hasRoutineType
-:hasRoutineType rdf:type owl:ObjectProperty ;
-                rdfs:domain :WorkoutRoutine ;
-                rdfs:range :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#hasRoutineType
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#hasRoutineType> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine> ;
+                                                                                          rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#hasTUT
-:hasTUT rdf:type owl:ObjectProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#hasTUT
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#hasTUT> rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#includesMuscleGroup
-:includesMuscleGroup rdf:type owl:ObjectProperty ;
-                     rdfs:domain :WorkoutRoutine ;
-                     rdfs:range :MuscleGroup .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#includesMuscleGroup
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#includesMuscleGroup> rdf:type owl:ObjectProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine> ;
+                                                                                               rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#isOfType
-:isOfType rdf:type owl:ObjectProperty ;
-          rdfs:domain :Exercise ;
-          rdfs:range :ExerciseType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isOfType
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isOfType> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> ;
+                                                                                    rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ExerciseType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#partOfSession
-:partOfSession rdf:type owl:ObjectProperty ;
-               rdfs:domain :Exercise ;
-               rdfs:range :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> ;
+                                                                                         rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#target
-:target rdf:type owl:ObjectProperty ;
-        rdfs:domain :Exercise .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#target
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#target> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#targetMuscleGroup
-:targetMuscleGroup rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :target ;
-                   rdfs:range :MuscleGroup .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetMuscleGroup
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetMuscleGroup> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#target> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#targetSpecificMuscle
-:targetSpecificMuscle rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :target ;
-                      rdfs:range :SpecificMuscle .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetSpecificMuscle
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetSpecificMuscle> rdf:type owl:ObjectProperty ;
+                                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#target> ;
+                                                                                                rdfs:range <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#SpecificMuscle> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#bodyWeight
-:bodyWeight rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bodyWeight
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bodyWeight> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#calorieSurplus
-:calorieSurplus rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:boolean .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#calorieSurplus
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#calorieSurplus> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:range xsd:boolean .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#caloriesBurned
-:caloriesBurned rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesBurned
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesBurned> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#caloriesConsumed
-:caloriesConsumed rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesConsumed
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesConsumed> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#concentricDuration
-:concentricDuration rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#concentricDuration
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#concentricDuration> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#currentReps
-:currentReps rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentReps
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentReps> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#currentSets
-:currentSets rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentSets
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentSets> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#currentWeight
-:currentWeight rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentWeight
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentWeight> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#durationInWeeks
-:durationInWeeks rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#durationInWeeks
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#durationInWeeks> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#eccentricDuration
-:eccentricDuration rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#eccentricDuration
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#eccentricDuration> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#endDate
-:endDate rdf:type owl:DatatypeProperty ;
-         rdfs:domain :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#endDate
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#endDate> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#focusOnEccentric
-:focusOnEccentric rdf:type owl:DatatypeProperty ;
-                  rdfs:comment "when true means that the training prioritizes the eccentric phase, which is essential for causing muscle damage and promoting growth"^^xsd:string .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#focusOnEccentric
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#focusOnEccentric> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:comment "when true means that the training prioritizes the eccentric phase, which is essential for causing muscle damage and promoting growth"^^xsd:string .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#frequencyPerWeek
-:frequencyPerWeek rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeek
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeek> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMax
-:frequencyPerWeekMax rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :frequencyPerWeek .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMax
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMax> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeek> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMin
-:frequencyPerWeekMin rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :frequencyPerWeek .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMin
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMin> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeek> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#initialReps
-:initialReps rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialReps
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialReps> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#initialSets
-:initialSets rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialSets
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialSets> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#initialWeight
-:initialWeight rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialWeight
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialWeight> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#nearMuscleFailure
-:nearMuscleFailure rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#nearMuscleFailure
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#nearMuscleFailure> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#oneRepMax
-:oneRepMax rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Exercise .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#oneRepMax
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#oneRepMax> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#percentageOf1RM
-:percentageOf1RM rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#percentageOf1RM
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#percentageOf1RM> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#proteinIntake
-:proteinIntake rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#proteinIntake
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#proteinIntake> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#repRange
-:repRange rdf:type owl:DatatypeProperty ;
-          rdfs:domain :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRange
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRange> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#repRangeMax
-:repRangeMax rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :repRange .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMax
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMax> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRange> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#repRangeMin
-:repRangeMin rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :repRange .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMin
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMin> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRange> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#repsPerSet
-:repsPerSet rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repsPerSet
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repsPerSet> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenExercises
-:restBetweenExercises rdf:type owl:DatatypeProperty ;
-                      rdfs:comment "seconds" .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercises
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercises> rdf:type owl:DatatypeProperty ;
+                                                                                                rdfs:comment "seconds" .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMax
-:restBetweenExercisesMax rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf :restBetweenExercises .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMax
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMax> rdf:type owl:DatatypeProperty ;
+                                                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercises> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMin
-:restBetweenExercisesMin rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf :restBetweenExercises .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMin
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMin> rdf:type owl:DatatypeProperty ;
+                                                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercises> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenSets
-:restBetweenSets rdf:type owl:DatatypeProperty ;
-                 rdfs:comment "seconds" .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSets
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSets> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:comment "seconds" .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMax
-:restBetweenSetsMax rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf :restBetweenSets .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMax
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMax> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSets> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMin
-:restBetweenSetsMin rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf :restBetweenSets .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMin
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMin> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSets> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#setsPerWeek
-:setsPerWeek rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#setsPerWeek
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#setsPerWeek> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#startDate
-:startDate rdf:type owl:DatatypeProperty ;
-           rdfs:domain :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#startDate
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#startDate> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#totalTimeUnderTension
-:totalTimeUnderTension rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#totalTimeUnderTension
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#totalTimeUnderTension> rdf:type owl:DatatypeProperty .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#volume
-:volume rdf:type owl:DatatypeProperty ;
-        rdfs:domain :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#volume
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#volume> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#weightUsed
-:weightUsed rdf:type owl:DatatypeProperty .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#weightUsed
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#weightUsed> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#Exercise
-:Exercise rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#ExerciseType
-:ExerciseType rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ExerciseType
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ExerciseType> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#MuscleGroup
-:MuscleGroup rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :repsPerSet ;
-                                   owl:minCardinality "6"^^xsd:nonNegativeInteger
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :setsPerWeek ;
-                                   owl:minCardinality "12"^^xsd:nonNegativeInteger
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :repsPerSet ;
-                                   owl:maxCardinality "12"^^xsd:nonNegativeInteger
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :setsPerWeek ;
-                                   owl:maxCardinality "20"^^xsd:nonNegativeInteger
-                                 ] .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repsPerSet> ;
+                                                                                                             owl:minCardinality "6"^^xsd:nonNegativeInteger
+                                                                                                           ] ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#setsPerWeek> ;
+                                                                                                             owl:minCardinality "12"^^xsd:nonNegativeInteger
+                                                                                                           ] ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repsPerSet> ;
+                                                                                                             owl:maxCardinality "12"^^xsd:nonNegativeInteger
+                                                                                                           ] ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#setsPerWeek> ;
+                                                                                                             owl:maxCardinality "20"^^xsd:nonNegativeInteger
+                                                                                                           ] .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#NutritionPlan
-:NutritionPlan rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#NutritionPlan
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#NutritionPlan> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#Person
-:Person rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Person
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Person> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#RoutineType
-:RoutineType rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#SpecificMuscle
-:SpecificMuscle rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#SpecificMuscle
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#SpecificMuscle> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#TimeUnderTension
-:TimeUnderTension rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TimeUnderTension
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TimeUnderTension> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#TrainingSession
-:TrainingSession rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty :durationInWeeks ;
-                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                            owl:onDatatype xsd:int ;
-                                                            owl:withRestrictions ( [ xsd:minInclusive "4"^^xsd:int
-                                                                                   ]
-                                                                                   [ xsd:maxInclusive "8"^^xsd:int
-                                                                                   ]
-                                                                                 )
-                                                          ]
-                                     ] .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> rdf:type owl:Class ;
+                                                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#durationInWeeks> ;
+                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                      owl:onDatatype xsd:int ;
+                                                                                                                                      owl:withRestrictions ( [ xsd:minInclusive "4"^^xsd:int
+                                                                                                                                                             ]
+                                                                                                                                                             [ xsd:maxInclusive "8"^^xsd:int
+                                                                                                                                                             ]
+                                                                                                                                                           )
+                                                                                                                                    ]
+                                                                                                               ] .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine
-:WorkoutRoutine rdf:type owl:Class .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine> rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#BenchPress
-:BenchPress rdf:type owl:NamedIndividual ,
-                     :Exercise ;
-            :isOfType :compoundExercise ;
-            :partOfSession :ts1 ;
-            :targetMuscleGroup :chest ;
-            :currentWeight "110"^^xsd:int ;
-            :initialWeight "100"^^xsd:int .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#BenchPress
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#BenchPress> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> ;
+                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isOfType> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#compoundExercise> ;
+                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts1> ;
+                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetMuscleGroup> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#chest> ;
+                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentWeight> "110"^^xsd:int ;
+                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialWeight> "100"^^xsd:int .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#Squats
-:Squats rdf:type owl:NamedIndividual ,
-                 :Exercise ;
-        :isOfType :compoundExercise ;
-        :partOfSession :ts2 ;
-        :targetMuscleGroup :legs .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Squats
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Squats> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> ;
+                                                                                  <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isOfType> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#compoundExercise> ;
+                                                                                  <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts2> ;
+                                                                                  <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetMuscleGroup> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#legs> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#biceps
-:biceps rdf:type owl:NamedIndividual ,
-                 :SpecificMuscle .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#biceps
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#biceps> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#SpecificMuscle> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#bicepsCurls
-:bicepsCurls rdf:type owl:NamedIndividual ,
-                      :Exercise ;
-             :isOfType :isolationExercise ;
-             :partOfSession :ts3 ;
-             :targetSpecificMuscle :biceps .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bicepsCurls
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bicepsCurls> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Exercise> ;
+                                                                                       <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isOfType> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isolationExercise> ;
+                                                                                       <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts3> ;
+                                                                                       <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#targetSpecificMuscle> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#biceps> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#chest
-:chest rdf:type owl:NamedIndividual ,
-                :MuscleGroup .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#chest
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#chest> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#compoundExercise
-:compoundExercise rdf:type owl:NamedIndividual ,
-                           :ExerciseType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#compoundExercise
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#compoundExercise> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ExerciseType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#fitness1
-:fitness1 rdf:type owl:NamedIndividual ,
-                   :WorkoutRoutine ;
-          :restBetweenExercisesMax "180"^^xsd:int ;
-          :restBetweenExercisesMin "120"^^xsd:int ;
-          :restBetweenSetsMax "90"^^xsd:int ;
-          :restBetweenSetsMin "60"^^xsd:int .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#fitness1
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#fitness1> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#WorkoutRoutine> ;
+                                                                                    <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMax> "180"^^xsd:int ;
+                                                                                    <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenExercisesMin> "120"^^xsd:int ;
+                                                                                    <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMax> "90"^^xsd:int ;
+                                                                                    <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#restBetweenSetsMin> "60"^^xsd:int .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#fullBody
-:fullBody rdf:type owl:NamedIndividual ,
-                   :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#fullBody
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#fullBody> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#isolationExercise
-:isolationExercise rdf:type owl:NamedIndividual ,
-                            :ExerciseType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isolationExercise
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#isolationExercise> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ExerciseType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#johnDoe
-:johnDoe rdf:type owl:NamedIndividual ,
-                  :Person ;
-         :follows :fitness1 ,
-                  :plan1 ;
-         :bodyWeight "75.0"^^xsd:double ;
-         rdfs:label "John Doe" .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#johnDoe
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#johnDoe> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#Person> ;
+                                                                                   <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#follows> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#fitness1> ,
+                                                                                                                                                                      <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#plan1> ;
+                                                                                   <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bodyWeight> "75.0"^^xsd:double ;
+                                                                                   rdfs:label "John Doe" .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#legs
-:legs rdf:type owl:NamedIndividual ,
-               :MuscleGroup .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#legs
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#legs> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#MuscleGroup> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#legsSplit
-:legsSplit rdf:type owl:NamedIndividual ,
-                    :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#legsSplit
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#legsSplit> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#lowerBody
-:lowerBody rdf:type owl:NamedIndividual ,
-                    :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#lowerBody
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#lowerBody> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#plan1
-:plan1 rdf:type owl:NamedIndividual ,
-                :NutritionPlan ;
-       :calorieSurplus "true"^^xsd:boolean ;
-       :caloriesBurned "2500.0"^^xsd:double ;
-       :caloriesConsumed "3000.0"^^xsd:double ;
-       :proteinIntake "150"^^xsd:int .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#plan1
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#plan1> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#NutritionPlan> ;
+                                                                                 <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#calorieSurplus> "true"^^xsd:boolean ;
+                                                                                 <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesBurned> "2500.0"^^xsd:double ;
+                                                                                 <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesConsumed> "3000.0"^^xsd:double ;
+                                                                                 <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#proteinIntake> "150"^^xsd:int .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#pullSplit
-:pullSplit rdf:type owl:NamedIndividual ,
-                    :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#pullSplit
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#pullSplit> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#pushSplit
-:pushSplit rdf:type owl:NamedIndividual ,
-                    :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#pushSplit
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#pushSplit> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#ts1
-:ts1 rdf:type owl:NamedIndividual ,
-              :TrainingSession ;
-     :hasTUT :tut1 ;
-     :frequencyPerWeekMax "3"^^xsd:int ;
-     :frequencyPerWeekMin "2"^^xsd:int ;
-     :repRangeMax "12"^^xsd:int ;
-     :repRangeMin "6"^^xsd:int ;
-     :volume "7200"^^xsd:int .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts1
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts1> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#hasTUT> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#tut1> ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMax> "3"^^xsd:int ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMin> "2"^^xsd:int ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMax> "12"^^xsd:int ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#repRangeMin> "6"^^xsd:int ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#volume> "7200"^^xsd:int .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#ts2
-:ts2 rdf:type owl:NamedIndividual ,
-              :TrainingSession ;
-     :frequencyPerWeekMax "3"^^xsd:int ;
-     :frequencyPerWeekMin "2"^^xsd:int .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts2
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts2> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMax> "3"^^xsd:int ;
+                                                                               <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#frequencyPerWeekMin> "2"^^xsd:int .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#ts3
-:ts3 rdf:type owl:NamedIndividual ,
-              :TrainingSession .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts3
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#ts3> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TrainingSession> .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#tut1
-:tut1 rdf:type owl:NamedIndividual ,
-               :TimeUnderTension ;
-      :concentricDuration "1"^^xsd:int ;
-      :eccentricDuration "3"^^xsd:int ;
-      :focusOnEccentric "true"^^xsd:boolean .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#tut1
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#tut1> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#TimeUnderTension> ;
+                                                                                <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#concentricDuration> "1"^^xsd:int ;
+                                                                                <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#eccentricDuration> "3"^^xsd:int ;
+                                                                                <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#focusOnEccentric> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/claireprudhomme/ontologies/2024/8/untitled-ontology-160#upperBody
-:upperBody rdf:type owl:NamedIndividual ,
-                    :RoutineType .
+###  http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#upperBody
+<http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#upperBody> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#RoutineType> .
 
 
 #################################################################
 #    Rules
 #################################################################
 
-:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:min rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :w rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:min rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:max rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:max rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :vp rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:ex rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:ex rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :newv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
@@ -486,19 +485,19 @@
 
 :v2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+:td rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :cd rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :ed rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:td rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:cr rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:cr rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:cs rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:cs rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :cw rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
@@ -508,15 +507,15 @@
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :initialWeight ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentWeight> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :w
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cw
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :currentWeight ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialWeight> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cw
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :w
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -537,44 +536,44 @@
    rdfs:label "adequateProtein"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :bodyWeight ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :w
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first :min ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first "1.6"^^xsd:string ;
+                                                                                                               rdf:rest ( :w
+                                                                                                                        )
+                                                                                                             ]
+                                                                                                  ]
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
-                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                               rdf:first :min ;
-                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                          rdf:first "1.6"^^xsd:string ;
-                                                                                                                          rdf:rest ( :w
-                                                                                                                                   )
-                                                                                                                        ]
-                                                                                                             ]
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#follows> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                          rdf:first :max ;
-                                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first "2.2"^^xsd:string ;
-                                                                                                                                     rdf:rest ( :w
-                                                                                                                                              )
-                                                                                                                                   ]
-                                                                                                                        ]
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#bodyWeight> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :w
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :follows ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :max ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "2.2"^^xsd:string ;
+                                                                                                                                                rdf:rest ( :w
+                                                                                                                                                         )
+                                                                                                                                              ]
+                                                                                                                                   ]
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :proteinIntake ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#proteinIntake> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :p ;
                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :vp
                                                                                                  ] ;
@@ -609,29 +608,35 @@
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :oneRepMax ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :ex ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentWeight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :w
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :partOfSession ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :ex ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :min ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first "65"^^xsd:string ;
+                                                                                                                          rdf:rest ( :v
+                                                                                                                                   )
+                                                                                                                        ]
+                                                                                                             ]
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :currentWeight ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :t ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :w
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#oneRepMax> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :ex ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :v
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first :min ;
+                                                                                                                                     rdf:first :max ;
                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                rdf:first "65"^^xsd:string ;
+                                                                                                                                                rdf:first "85"^^xsd:string ;
                                                                                                                                                 rdf:rest ( :v
                                                                                                                                                          )
                                                                                                                                               ]
@@ -650,16 +655,10 @@
                                                                                                                                               ]
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#multiply> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                                                           rdf:first :max ;
-                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                                      rdf:first "85"^^xsd:string ;
-                                                                                                                                                                      rdf:rest ( :v
-                                                                                                                                                                               )
-                                                                                                                                                                    ]
-                                                                                                                                                         ]
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#partOfSession> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :ex ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :t
                                                                                                             ] ;
                                                                                                   rdf:rest rdf:nil
                                                                                                 ]
@@ -692,23 +691,23 @@
    rdfs:label "calorieSurplus"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :caloriesBurned ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :v1
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :v1
+                                                                                                    :v2
+                                                                                                  )
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :caloriesConsumed ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesConsumed> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :x ;
                                                                   <http://www.w3.org/2003/11/swrl#argument2> :v2
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> ( :v1
-                                                                                                                          :v2
-                                                                                                                        )
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#caloriesBurned> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :v1
                                                                            ] ;
                                                                  rdf:rest rdf:nil
                                                                ]
@@ -716,7 +715,7 @@
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :calorieSurplus ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#calorieSurplus> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:string
                                                      ] ;
@@ -729,24 +728,24 @@
    rdfs:label "totalDuration"^^xsd:string ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :concentricDuration ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :cd
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :td
+                                                                                                    :cd
+                                                                                                    :ed
+                                                                                                  )
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :eccentricDuration ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#concentricDuration> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ed
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cd
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#add> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> ( :td
-                                                                                                                          :cd
-                                                                                                                          :ed
-                                                                                                                        )
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#eccentricDuration> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :ed
                                                                            ] ;
                                                                  rdf:rest rdf:nil
                                                                ]
@@ -754,7 +753,7 @@
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :totalTimeUnderTension ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#totalTimeUnderTension> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> :td
                                                      ] ;
@@ -768,15 +767,15 @@
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :initialReps ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentReps> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :r
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cr
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :currentReps ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialReps> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cr
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :r
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -798,15 +797,15 @@
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :initialSets ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#currentSets> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :s
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cs
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :currentSets ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/odkar/ontologies/2024/8/untitled-ontology-160#initialSets> ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cs
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :s
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
