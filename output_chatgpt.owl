@@ -16,109 +16,109 @@
 
 ### Properties ###
 :hasWeight rdf:type rdf:Property ;
-    rdfs:domain :Person ;
-    rdfs:range xsd:float .
+    rdfs:domain :Person ;
+    rdfs:range xsd:float .
 
 :hasCaloricIntake rdf:type rdf:Property ;
-    rdfs:domain :NutritionPlan ;
-    rdfs:range xsd:float .
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
 :hasCaloricExpenditure rdf:type rdf:Property ;
-    rdfs:domain :NutritionPlan ;
-    rdfs:range xsd:float .
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
 :hasProteinIntake rdf:type rdf:Property ;
-    rdfs:domain :NutritionPlan ;
-    rdfs:range xsd:float .
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:float .
 
 :followsNutritionPlan rdf:type rdf:Property ;
-    rdfs:domain :Person ;
-    rdfs:range :NutritionPlan .
+    rdfs:domain :Person ;
+    rdfs:range :NutritionPlan .
 
 :requiresCaloricSurplus rdf:type rdf:Property ;
-    rdfs:domain :NutritionPlan ;
-    rdfs:range xsd:boolean .
+    rdfs:domain :NutritionPlan ;
+    rdfs:range xsd:boolean .
 
 :targetsMuscleGroup rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range :MuscleGroup .
+    rdfs:domain :Exercise ;
+    rdfs:range :MuscleGroup .
 
 :hasIntensity rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:float .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:float .
 
 :hasRepetitionRange rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:string .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:string .
 
 :hasSetCount rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:integer .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
 :hasWeightUsed rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:float .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:float .
 
 :hasRestPeriod rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:integer .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
 :hasTimeUnderTension rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:integer .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:integer .
 
 :progressiveOverload rdf:type rdf:Property ;
-    rdfs:domain :Exercise ;
-    rdfs:range xsd:boolean .
+    rdfs:domain :Exercise ;
+    rdfs:range xsd:boolean .
 
 :hasFrequency rdf:type rdf:Property ;
-    rdfs:domain :FitnessPlan ;
-    rdfs:range xsd:integer .
+    rdfs:domain :FitnessPlan ;
+    rdfs:range xsd:integer .
 
 :includesExercise rdf:type rdf:Property ;
-    rdfs:domain :FitnessPlan ;
-    rdfs:range :Exercise .
+    rdfs:domain :FitnessPlan ;
+    rdfs:range :Exercise .
 
 ### Individuals ###
 :JohnDoe rdf:type :Person ;
-    :hasWeight 75.0 ;
-    :followsNutritionPlan :Plan1 .
+    :hasWeight 75.0 ;
+    :followsNutritionPlan :Plan1 .
 
 :Plan1 rdf:type :NutritionPlan ;
-    :hasCaloricIntake 3000.0 ;
-    :hasCaloricExpenditure 2500.0 ;
-    :requiresCaloricSurplus true ;
-    :hasProteinIntake 150.0 .
+    :hasCaloricIntake 3000.0 ;
+    :hasCaloricExpenditure 2500.0 ;
+    :requiresCaloricSurplus true ;
+    :hasProteinIntake 150.0 .
 
 :BenchPress rdf:type :CompoundExercise ;
-    :targetsMuscleGroup :Chest ;
-    :hasRepetitionRange "6-12" ;
-    :hasSetCount 12 ;
-    :hasWeightUsed 110.0 ;
-    :hasRestPeriod 90 ;
-    :hasTimeUnderTension 4 ;
-    :progressiveOverload true ;
-    :hasIntensity 0.85 .
+    :targetsMuscleGroup :Chest ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 110.0 ;
+    :hasRestPeriod 90 ;
+    :hasTimeUnderTension 4 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.85 .
 
 :Squats rdf:type :CompoundExercise ;
-    :targetsMuscleGroup :Legs ;
-    :hasRepetitionRange "6-12" ;
-    :hasSetCount 12 ;
-    :hasWeightUsed 100.0 ;
-    :hasRestPeriod 90 ;
-    :hasTimeUnderTension 4 ;
-    :progressiveOverload true ;
-    :hasIntensity 0.85 .
+    :targetsMuscleGroup :Legs ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 100.0 ;
+    :hasRestPeriod 90 ;
+    :hasTimeUnderTension 4 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.85 .
 
 :BicepCurls rdf:type :IsolationExercise ;
-    :targetsMuscleGroup :Biceps ;
-    :hasRepetitionRange "6-12" ;
-    :hasSetCount 12 ;
-    :hasWeightUsed 20.0 ;
-    :hasRestPeriod 60 ;
-    :hasTimeUnderTension 3 ;
-    :progressiveOverload true ;
-    :hasIntensity 0.75 .
+    :targetsMuscleGroup :Biceps ;
+    :hasRepetitionRange "6-12" ;
+    :hasSetCount 12 ;
+    :hasWeightUsed 20.0 ;
+    :hasRestPeriod 60 ;
+    :hasTimeUnderTension 3 ;
+    :progressiveOverload true ;
+    :hasIntensity 0.75 .
 
 :Chest rdf:type :MuscleGroup .
 :Legs rdf:type :MuscleGroup .
@@ -126,5 +126,5 @@
 
 ### Fitness Plan ###
 :JohnDoeFitnessPlan rdf:type :FitnessPlan ;
-    :hasFrequency 3 ;
-    :includesExercise :BenchPress, :Squats, :BicepCurls .
+    :hasFrequency 3 ;
+    :includesExercise :BenchPress, :Squats, :BicepCurls .
