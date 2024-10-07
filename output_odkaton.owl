@@ -342,13 +342,13 @@ ex:TrainingSession1 rdf:type owl:NamedIndividual ,
 ex:TrainingSession2 rdf:type owl:NamedIndividual .
 
 
-[ rdf:type xsd:float ;
-  xsd:maxInclusive "2.2"^^xsd:float ;
-  xsd:minInclusive "1.6"^^xsd:float
+[ rdf:type xsd:int ;
+  xsd:minInclusive "0"^^xsd:int
 ] .
 
-[ rdf:type xsd:int ;
-   xsd:minInclusive "0"^^xsd:int
+[ rdf:type xsd:float ;
+   xsd:maxInclusive "2.2"^^xsd:float ;
+   xsd:minInclusive "1.6"^^xsd:float
  ] .
 
 #################################################################
@@ -359,6 +359,8 @@ ex:TrainingSession2 rdf:type owl:NamedIndividual .
 
 <y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+<http://www.w3.org/2002/07/x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment ""^^xsd:string ;
    rdfs:label "R2"^^xsd:string ;
@@ -366,7 +368,7 @@ ex:TrainingSession2 rdf:type owl:NamedIndividual .
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> ex:targets ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <x> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/x> ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> ex:SpecificMuscles
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -374,7 +376,7 @@ ex:TrainingSession2 rdf:type owl:NamedIndividual .
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> ex:IsolationExercise ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <x>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/x>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -393,7 +395,7 @@ ex:TrainingSession2 rdf:type owl:NamedIndividual .
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> ex:MuscleGroup ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <x>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <y>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
